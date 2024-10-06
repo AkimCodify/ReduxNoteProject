@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+.s-title{
+    font-family: 'Lexend Deca';
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 80px;
+    text-align: center;
+    margin-top: 157px;
+}
+
+.s-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+}
+
+.s-input1{
+    width: 300px;
+    height: 45px;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding-left: 18px;
+    padding-right: 18px;
+    border: none;
+    color: black;
+    font-family: 'Lexend Deca';
+    outline: none;
+    border: solid black 1px;
+    caret-color: orange;
+}
+
+.s-input1::placeholder{
+    color: black;
+    font-family: 'Lexend Deca';
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.s-input2 {
+    width: 300px;
+    height: 45px;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding-left: 18px;
+    padding-right: 18px;
+    border: none;
+    color: black;
+    font-family: 'Lexend Deca';
+    outline: none;
+    border: solid black 1px;
+    caret-color: orange;
+}
+
+.s-input2::placeholder {
+    color: black;
+    font-family: 'Lexend Deca';
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.s-btn{
+    background: orange;
+    color: black;
+    font-family: 'Lexend Deca';
+    font-size: 16px;
+    font-weight: 400;
+    box-shadow: 0px 4px 4px 0px #0000004D;
+    width: 300px;
+    height: 45px;
+    border-radius: 10px;
+    margin: 0 auto;
+    border: none;
+}
+
+.s-box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link1{
+    font-family: 'Lexend Deca';
+}
+
+.kl{
+    font-family: 'Lexend Deca';
+}
+
+.g{
+    width: 100px;
+    height: 50px;
+}

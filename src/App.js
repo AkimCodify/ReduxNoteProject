@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useEffect } from "react";
+import Navigation from "./components/Navigation/Navigation";
+import { NoteContext } from "./components/NoteContextProvider";
+import Routing from "./components/Routing";
+
 
 function App() {
+  const {getNotes} = useContext(NoteContext)
+  useEffect(() => {
+    getNotes()
+  }, [])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Navigation/>
+      <Routing/>
+    </div>    
   );
 }
 

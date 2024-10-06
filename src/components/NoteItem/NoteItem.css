@@ -1,0 +1,63 @@
+.n-box{
+    width: 400px;
+    height: 600px;
+    background-color: rgb(242, 247, 0);
+    border-radius: 20px;
+}
+
+.name-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.sd{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.n-name{
+    font-family: 'Kanit';
+    font-size: 50px;
+}
+
+.n-info{
+    font-family: 'Kanit';
+    display: flex;
+    flex-wrap: wrap;
+    white-space: pre-line;
+}
+
+.deletebtn{
+    background-color: red;
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Lexend Deca';
+}
+
+.jk{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.asd{
+    margin-top: 0px;
+}
+
+.jkl{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.sjk{
+    display: flex;
+    flex-wrap: wrap;
+}
