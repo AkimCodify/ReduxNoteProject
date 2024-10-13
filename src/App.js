@@ -1,13 +1,14 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import Navigation from "./components/Navigation/Navigation";
-import { NoteContext } from "./components/NoteContextProvider";
 import Routing from "./components/Routing";
+import { useDispatch } from "react-redux";
+import { asyncGetNotes } from "./components/redux/asyncActions/asyncGetNotes";
 
 
 function App() {
-  const {getNotes} = useContext(NoteContext)
+  const dispatch = useDispatch()
   useEffect(() => {
-    getNotes()
+    dispatch(asyncGetNotes())
   }, [])
   return (
     <div className="App">

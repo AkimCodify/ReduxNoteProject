@@ -121,15 +121,13 @@
       "email": "sad@asd",
       "password": "$2a$10$.rpZj.ga/MBNpISV/0tcn.1GlSyV.6z7z3xpJezLeXmkqXoIK5Bpe",
       "id": 23
-    }
-  ],
-  "notes": [
+    },
     {
-      "name": "asd",
-      "info": "asd",
-      "sel": "notimportant",
-      "id": 1
+      "email": "uiop@uiop",
+      "password": "$2a$10$sLdT0cvVvik63dHfn8Ffwe/Ebc7DwE92i/1ISmCvm5ZIQRV.Eip1i",
+      "id": 24
     }
   ],
+  "notes": [],
   "categories": []
 }

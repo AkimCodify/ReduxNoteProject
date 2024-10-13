@@ -1,20 +1,22 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { NoteContext } from '../components/NoteContextProvider';
+import { useDispatch } from 'react-redux';
+import { asyncAddNote } from '../components/redux/asyncActions/asyncAddNote';
+
 
 const CreatePage = () => {
     let [value1, setValue1] = useState('')
     let [value2, setValue2] = useState('')
     let [value3, setValue3] = useState('important')
     const Navigate = useNavigate()
-    const {addNote} = useContext(NoteContext)
+    const dispatch = useDispatch()
     const handleAdd = () => {
         const newNoteObj = {
             name: value1,
             info: value2,
             sel: value3
         }
-        addNote(newNoteObj)
+        dispatch(asyncAddNote(newNoteObj))
         Navigate('/')
     }
     return (

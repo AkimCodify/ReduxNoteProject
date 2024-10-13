@@ -1,17 +1,21 @@
-import React, { useContext, useState } from 'react';
-import { NoteContext } from '../../components/NoteContextProvider';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { asyncLoginUser } from '../../components/redux/asyncActions/asyncLoginUser';
+import { useNavigate } from 'react-router-dom';
+
 
 const LoginPage = () => {
     let [value1, setValue1] = useState('')
     let [value2, setValue2] = useState('')
-    const {loginUser} = useContext(NoteContext)
+    const dispatch = useDispatch()
+    const Navigate = useNavigate()
     const handleLogin = () => {
         const userObj = {
-            token: "asdasdasd",
             email: value1,
             password: value2
         }
-        loginUser(userObj)
+        dispatch(asyncLoginUser(userObj))
+        Navigate('/')
     }
     return (
         <div>

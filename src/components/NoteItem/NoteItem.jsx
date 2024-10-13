@@ -1,12 +1,14 @@
-import React, { useContext, useState } from 'react';
-import { NoteContext } from '../NoteContextProvider';
+import React, { useState } from 'react';
 import './NoteItem.css'
+import { useDispatch } from 'react-redux';
+import { asyncDeleteNote } from '../redux/asyncActions/asyncDeleteNote';
+import { asyncEditNote } from '../redux/asyncActions/asyncEditNote';
 
 const NoteItem = ({note}) => {
-    const {deleteNote, EditNote} = useContext(NoteContext)
+    const dispatch = useDispatch()
     const handleDelete = () => {
         let currentId = note.id
-        deleteNote(currentId)
+        dispatch(asyncDeleteNote(currentId))
     }
     const handleEdit = () => {
         let filteredNote = {
@@ -15,7 +17,7 @@ const NoteItem = ({note}) => {
             sel: value3
         }
         let currentId = note.id
-        EditNote(currentId, filteredNote)
+        dispatch(asyncEditNote(currentId, filteredNote))
         setShow(!show)
     }
     const [show, setShow] = useState(false)

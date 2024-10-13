@@ -1,17 +1,21 @@
-import React, { useContext, useState } from 'react';
-import { NoteContext } from '../../components/NoteContextProvider';
+import React, { useState } from 'react';
 import './RegisterPage.css'
+import { asyncRegisterUser } from '../../components/redux/asyncActions/asyncRegisterUser';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const RegisterPage = () => {
     const [value1, setValue1] = useState('')
     const [value2, setValue2] = useState('')
-    const {registerUser} = useContext(NoteContext)
+    const dispatch = useDispatch()
+    const Navigate = useNavigate()
     const handleRegister = () => {
         const newUserObj = {
             email: value1,
             password: value2
         }
-        registerUser(newUserObj)
+        dispatch(asyncRegisterUser(newUserObj))
+        Navigate('/')
     }
     return (
             <div>
